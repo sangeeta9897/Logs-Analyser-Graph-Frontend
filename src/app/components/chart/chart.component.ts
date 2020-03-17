@@ -75,7 +75,7 @@ export class ChartComponent implements OnInit {
 
   getGraphData() {
     this.logService.fecthingGraphData().subscribe(result => {
-      var data = result.latency;
+      let data = result.latency;
       Object.keys(data).forEach(key => {
         this.date.push(key);
         this.average.push(data[key]["avg"]);

@@ -50,7 +50,7 @@ export class RequestCountTargetComponent implements OnInit {
   }
 
   requestTargetPerCountGraph() {
-    var data = this.requestTargetData;
+    let data = this.requestTargetData;
     Object.keys(data).forEach(key => {
       this.targetGroup.push(key);
       if (data[key]["2xx"]) {
