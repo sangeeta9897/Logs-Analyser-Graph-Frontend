@@ -1,9 +1,6 @@
-<!-- <div *ngIf="logsRecieved == true" [chart]="chart"></div> -->
-<div id="container" style="height:400px"></div>
-<!-- <highcharts-chart
+<div id="latency" style="height:400px; margin-bottom: 5em"></div>
+
+<app-request-count-target
   *ngIf="logsRecieved"
-  [Highcharts]="Highcharts"
-  [options]="chartOptions"
-  style="width: 100%; height: 400px; display: block;"
-></highcharts-chart> -->
-<div id="container2" style="height:400px"></div>
+  [requestTargetData]="requestTargetData"
+></app-request-count-target>

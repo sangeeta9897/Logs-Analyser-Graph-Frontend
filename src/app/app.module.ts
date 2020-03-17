@@ -6,9 +6,10 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { ChartComponent } from "./components/chart/chart.component";
 import { HighchartsChartModule } from "highcharts-angular";
+import { RequestCountTargetComponent } from './components/request-count-target/request-count-target.component';
 
 @NgModule({
-  declarations: [AppComponent, ChartComponent],
+  declarations: [AppComponent, ChartComponent, RequestCountTargetComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
