@@ -1,4 +1,63 @@
 <p *ngIf="!logsRecieved">Loading...</p>
+
+<div class="mt-5 ml-5">
+  <div class="custom-control custom-radio custom-control-inline ">
+    <input
+      type="radio"
+      class="custom-control-input"
+      id="average"
+      name="graphs"
+      checked
+      (click)="setGraphValue('average')"
+    />
+    <label class="custom-control-label" for="average">average</label>
+  </div>
+
+  <div class="custom-control custom-radio custom-control-inline">
+    <input
+      type="radio"
+      class="custom-control-input"
+      id="p90"
+      name="graphs"
+      (click)="setGraphValue('p90')"
+    />
+    <label class="custom-control-label" for="p90">p90</label>
+  </div>
+
+  <div class="custom-control custom-radio custom-control-inline">
+    <input
+      type="radio"
+      class="custom-control-input"
+      id="p99"
+      name="graphs"
+      (click)="setGraphValue('p99')"
+    />
+    <label class="custom-control-label" for="p99">p99</label>
+  </div>
+
+  <div class="custom-control custom-radio custom-control-inline">
+    <input
+      type="radio"
+      class="custom-control-input"
+      id="p99_9"
+      name="graphs"
+      (click)="setGraphValue('p99_9')"
+    />
+    <label class="custom-control-label" for="p99_9">p99.9</label>
+  </div>
+
+  <div class="custom-control custom-radio custom-control-inline">
+    <input
+      type="radio"
+      class="custom-control-input"
+      id="p99_99"
+      name="graphs"
+      (click)="setGraphValue('p99_99')"
+    />
+    <label class="custom-control-label" for="p99_99">p99.99</label>
+  </div>
+</div>
+
 <div id="latency" style="height:400px; margin-bottom: 5em"></div>
 
 <app-request-count-target

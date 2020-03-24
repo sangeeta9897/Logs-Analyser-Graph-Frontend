@@ -8,7 +8,8 @@ import { Observable } from "rxjs";
 export class LogService {
   constructor(private http: HttpClient) {}
 
-  baseUrl: string = "https://logs-analyzer-graph.herokuapp.com";
+  // baseUrl: string = "https://logs-analyzer-graph.herokuapp.com";
+  baseUrl: string = "http://localhost:3001";
   private options = {
     headers: new HttpHeaders().set("Content-Type", "application/json")
   };
