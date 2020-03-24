@@ -5,7 +5,10 @@
 </div>
 
 <div *ngIf="logsRecieved" class="mt-5 ml-5">
-  <div class="custom-control custom-radio custom-control-inline ">
+  <div>
+    Choose the type of Graph
+  </div>
+  <div class="custom-control custom-radio custom-control-inline mt-3 ">
     <input
       type="radio"
       class="custom-control-input"
@@ -45,7 +48,7 @@
       class="custom-control-input"
       id="p99_9"
       name="graphs"
-      (click)="setGraphValue('p99_9')"
+      (click)="setGraphValue('p99.9')"
     />
     <label class="custom-control-label" for="p99_9">p99.9</label>
   </div>
@@ -56,7 +59,7 @@
       class="custom-control-input"
       id="p99_99"
       name="graphs"
-      (click)="setGraphValue('p99_99')"
+      (click)="setGraphValue('p99.99')"
     />
     <label class="custom-control-label" for="p99_99">p99.99</label>
   </div>

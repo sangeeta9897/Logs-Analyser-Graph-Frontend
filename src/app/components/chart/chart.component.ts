@@ -51,7 +51,7 @@ export class ChartComponent implements OnInit {
   }
 
   setGraphValue(bindValue) {
-    this.options.title.text = "Latency Graph " + bindValue;
+    this.options.title.text = "Latency Graph for " + bindValue;
     this.options.xAxis.title.text = "Date";
     this.options.xAxis.categories = this.date;
     this.options.yAxis.title.text = "Latencies";
@@ -67,14 +67,10 @@ export class ChartComponent implements OnInit {
   }
 
   getGraphData() {
-    // if (ch) console.log(bindValue);
-    //this.date = [];
+    this.options.title.text = "Latency Graph for average";
     this.logService.fecthingGraphData().subscribe(result => {
-      // console.log(result);
       let data = result.latency;
-
       var key = Object.keys(data)[0];
-
       Object.keys(data[key]).forEach(hour => {
         var xhour = hour;
         Object.keys(data[key][hour]).forEach(minute => {
