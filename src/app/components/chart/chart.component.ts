@@ -68,7 +68,7 @@ export class ChartComponent implements OnInit {
 
   getGraphData() {
     // if (ch) console.log(bindValue);
-    this.date = [];
+    //this.date = [];
     this.logService.fecthingGraphData().subscribe(result => {
       // console.log(result);
       let data = result.latency;
@@ -92,11 +92,11 @@ export class ChartComponent implements OnInit {
         Object.keys(data[key]).forEach(hour => {
           Object.keys(data[key][hour]).forEach(minute => {
             var finalValues = data[key][hour][minute];
-            this.average[index].push(finalValues.avg || null);
-            this.p99_99[index].push(finalValues["p99.99"] || null);
-            this.p99_9[index].push(finalValues["p99.9"] || null);
-            this.p99[index].push(finalValues["p99"] || null);
-            this.p90[index].push(finalValues["p90"] || null);
+            this.average[index].push(finalValues.avg || 0);
+            this.p99_99[index].push(finalValues["p99.99"] || 0);
+            this.p99_9[index].push(finalValues["p99.9"] || 0);
+            this.p99[index].push(finalValues["p99"] || 0);
+            this.p90[index].push(finalValues["p90"] || 0);
           });
         });
       });

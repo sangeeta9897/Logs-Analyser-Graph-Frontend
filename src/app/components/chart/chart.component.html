@@ -1,6 +1,10 @@
-<p *ngIf="!logsRecieved">Loading...</p>
+<div *ngIf="!logsRecieved" class="spinner">
+  <div class="spinner-border" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
 
-<div class="mt-5 ml-5">
+<div *ngIf="logsRecieved" class="mt-5 ml-5">
   <div class="custom-control custom-radio custom-control-inline ">
     <input
       type="radio"
