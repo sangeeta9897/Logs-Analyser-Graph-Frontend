@@ -72,9 +72,12 @@ export class ChartComponent implements OnInit {
       let data = result.latency;
       var key = Object.keys(data)[0];
       Object.keys(data[key]).forEach(hour => {
-        var xhour = hour;
         Object.keys(data[key][hour]).forEach(minute => {
-          this.date.push(xhour.toString() + ":" + minute.toString());
+          this.date.push(
+            (hour.length != 1 ? hour : "0" + hour) +
+              ":" +
+              (minute.length != 1 ? minute : "0" + minute)
+          );
         });
       });
 
